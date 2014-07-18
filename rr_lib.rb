@@ -1641,7 +1641,7 @@ attr_reader :status, :artist, :album, :year, :genre
 
 	# characters that will be changed for tags and filenames
 	def allFilter(var)
-		var.gsub!('`', "'")
+		var.gsub!(/[`´]/, "'")
 		
 		# replace any underscores with spaces, some freedb info got 
 		# underscores instead of spaces
